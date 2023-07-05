@@ -2,7 +2,7 @@
 
 #define LAYOUT_STACK_INITIAL_SIZE 4
 
-void checkMemory(void *memory)
+static void checkMemory(void *memory)
 {
     if (memory == NULL)
     {
@@ -11,7 +11,7 @@ void checkMemory(void *memory)
     }
 }
 
-void growWidgetCollection(WidgetCollection *collection)
+static void growWidgetCollection(WidgetCollection *collection)
 {
     collection->data = (Widget **)realloc(collection->data, collection->capacity + LAYOUT_STACK_INITIAL_SIZE);
     checkMemory(collection->data);

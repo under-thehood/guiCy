@@ -9,5 +9,5 @@ typedef struct
     Color color;
 } Container;
 
-Container *createContainer(float width, float height, Color color);
+extern Container *createContainer(float width, float height, Color color);
 #endif

@@ -9,12 +9,12 @@ typedef struct
     char *title;
 } Window;
 
-Window createWindow(int width, int height, char *title);
+extern Window createWindow(int width, int height, char *title);
 
-void closeWindow(Window *win);
+extern void closeWindow(Window *win);
 
-bool isWindowClosed(Window *win);
+extern bool isWindowClosed(Window *win);
 
-void updateWindow(Window *win);
+extern void updateWindow(Window *win);
 
 #endif

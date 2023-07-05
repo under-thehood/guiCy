@@ -10,9 +10,9 @@ typedef struct
     size_t capacity;
 } WidgetCollection;
 
-WidgetCollection *createWidgetCollection();
+extern WidgetCollection *createWidgetCollection();
 
-void destroyWidgetCollection(WidgetCollection *collection);
+extern void destroyWidgetCollection(WidgetCollection *collection);
 
-void pushWidget(WidgetCollection *collection, Widget *widget);
+extern void pushWidget(WidgetCollection *collection, Widget *widget);
 #endif

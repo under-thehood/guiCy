@@ -1,6 +1,6 @@
 #include "../../include/widget/container.h"
 
-void paintContainer(void *widget)
+static void paintContainer(void *widget)
 {
     Container *container = (Container *)widget;
     DrawRectangle(container->base.x, container->base.y, container->base.width, container->base.height, container->color);

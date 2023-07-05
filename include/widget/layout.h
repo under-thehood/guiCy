@@ -1,7 +1,7 @@
 #ifndef _CGUI_WIDGET_LAYOUT_H_
 #define _CGUI_WIDGET_LAYOUT_H_
-#include"./widget_collection.h"
-
+#include "./widget_collection.h"
+#include"../window.h"
 
 typedef enum
 {
@@ -17,17 +17,14 @@ typedef struct
 } Layout;
 
 
-Layout *createLayout(Widget base, LayoutDirection direction);
-
-void destroyLayout(Layout *layout);
-
-void pushChildrenToLayout(Layout *layout, Widget *widget);
 
 
-// void updateLayout(Window *win, Layout *layout)
-// {
-//     layout->base.width = win->width;
-//     layout->base.height = win->height;
-// }
+extern Layout *createLayout(Widget base, LayoutDirection direction);
 
+extern void destroyLayout(Layout *layout);
+
+extern void pushChildrenToLayout(Layout *layout, Widget *widget);
+
+extern void updateLayout(Window *win, Layout *layout);
+extern void paintLayout(void *layout_void);
 #endif

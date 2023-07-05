@@ -1,8 +1,6 @@
-#include"../../include/widget/layout.h"
+#include "../../include/widget/layout.h"
 
-
-
-void displayHorizontalLayout(Layout *layout)
+static void displayHorizontalLayout(Layout *layout)
 {
 
     for (size_t i = 0; i < layout->childrens->size; i++)
@@ -15,7 +13,7 @@ void displayHorizontalLayout(Layout *layout)
         // displayChildren(widget, GREEN);
     }
 }
-void displayVerticalLayout(Layout *layout)
+static void displayVerticalLayout(Layout *layout)
 {
     // Widget widget;
     for (size_t i = 0; i < layout->childrens->size; i++)
@@ -60,4 +58,10 @@ void destroyLayout(Layout *layout)
 void pushChildrenToLayout(Layout *layout, Widget *widget)
 {
     pushWidget(layout->childrens, widget);
+}
+
+void updateLayout(Window *win, Layout *layout)
+{
+    layout->base.width = win->width;
+    layout->base.height = win->height;
 }
